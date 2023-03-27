@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;400&family=Yeseva+One&display=swap');
+$gray-border-thin: 1px solid grey;
+$bottom-shadow: 3px 6px 2px 0px rgba(0,0,0,0.16);
+$transition-site: all 0.5s;
+$spacer: 15px;
+
+body{
+    margin: 0px;
+    font-family: 'Sora', sans-serif;
+    padding: $spacer;
+}
+
+header.site-header{
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: $gray-border-thin;
+        box-shadow: $bottom-shadow;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                list-style: none;
+                margin: $spacer;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    padding: $spacer;
+    background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(255,255,255,1) 49%);
+}
+
+.list-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .product{
+        border: $gray-border-thin;
+        padding: $spacer;
+        margin: $spacer;
+        box-shadow: $bottom-shadow;
+        border-radius: 15px;
+        transition: $transition-site;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+footer.site-footer{
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
