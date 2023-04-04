@@ -1,6 +1,16 @@
 $color-active : #ff5900;
 $color-secondary: green;
 
+$sm: "sm";
+$sm-media-query: "screen and (min-width: 762px)";
+
+h1{
+    &.color-red-#{sm}{
+        @media #{$sm-media-query}{
+            color:red
+        }
+    }
+}
 
 ul.list-articles{
     h2{
