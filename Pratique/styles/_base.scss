@@ -1,0 +1,34 @@
+// reset, variables, mixins and utilities classes.
+
+// ------------------ reset-------------------------
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;400&family=Yeseva+One&display=swap');
+
+
+// ----------------- variables ---------------------
+
+$gray-border-thin: 1px solid grey;
+$bottom-shadow: 3px 6px 2px 0px rgba(0,0,0,0.16);
+$transition-site: all 0.5s ease;
+$spacer: 15px;
+$black: black;
+$white: white;
+$red: red;
+$accent-color: purple;
+$color-btn: rgb(194, 194, 194);
+$color-btn-hover: rgb(100, 100, 100);
+$media-queries-navbar-m: "screen and (min-width:750px)";
+$media-queries-navbar-l: "screen and (min-width:960px)";
+
+
+// -------------------- mixins ----------------------
+
+
+
+// -------------------- utilities ----------------------
+.transition-scale{
+    transition: $transition-site;
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}

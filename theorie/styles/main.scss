@@ -1,8 +1,5 @@
-$color-active : #ff5900;
-$color-secondary: green;
+@import 'base'
 
-$sm: "sm";
-$sm-media-query: "screen and (min-width: 762px)";
 
 h1{
     &.color-red-#{sm}{

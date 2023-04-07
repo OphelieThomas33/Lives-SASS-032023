@@ -1,0 +1,38 @@
+.btn{
+    display: inline-block;
+    padding: 1em 2em;
+    margin: $spacer;
+    background-color: $color-btn ;
+    border: $gray-border-thin;
+    text-decoration: none;
+    border-radius: 5px;
+    color: $black;
+    transition: $transition-site;
+    &:hover{
+        background-color: $accent-color ;
+        cursor: pointer;
+        color: $white;
+    }
+}
+
+
+.list-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .product{
+        border: $gray-border-thin;
+        padding: $spacer;
+        margin: $spacer;
+        box-shadow: $bottom-shadow;
+        border-radius: 15px;
+        background-color: $white;
+        @extend .transition-scale;
+        .buy-button{
+            @extend .btn;
+        }
+    }
+}
+
+
+

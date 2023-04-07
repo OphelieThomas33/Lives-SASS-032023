@@ -1,23 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;400&family=Yeseva+One&display=swap");
-.transition-scale, .list-products .product .buy-button, .list-products .product, h1 {
+.transition-scale, .list-products .product, h1 {
   transition: all 0.5s ease;
 }
-.transition-scale:hover, .list-products .product .buy-button:hover, .list-products .product:hover, h1:hover {
+.transition-scale:hover, .list-products .product:hover, h1:hover {
   transform: scale(1.05);
-  cursor: pointer;
-}
-
-.btn, .list-products .product .buy-button {
-  display: inline-block;
-  padding: 1em 2em;
-  margin: 15px;
-  background-color: rgb(223, 222, 222);
-  border: 1px solid grey;
-  text-decoration: none;
-  border-radius: 5px;
-  color: black;
-}
-.btn:hover, .list-products .product .buy-button:hover {
   cursor: pointer;
 }
 
@@ -31,7 +17,8 @@ header.site-header nav {
   border-bottom: 1px solid grey;
   background-color: white;
   position: fixed;
-  width: 100%;
+  z-index: 10;
+  width: calc(100% - 30px);
   height: 65px;
   display: flex;
   justify-content: space-between;
@@ -43,6 +30,11 @@ header.site-header nav {
 @media screen and (min-width:750px) {
   header.site-header nav .toggle-navbar {
     display: none;
+  }
+}
+@media screen and (min-width:960px) {
+  header.site-header nav h1 {
+    white-space: nowrap;
   }
 }
 header.site-header nav ul {
@@ -81,12 +73,39 @@ header.site-header nav li a {
   color: black;
 }
 header.site-header nav li a:hover {
-  color: red;
+  color: purple;
+}
+
+h1:hover {
+  color: purple;
 }
 
 main {
   padding: 15px;
   background: radial-gradient(circle, rgb(148, 187, 233) 0%, rgb(255, 255, 255) 49%);
+}
+
+footer.site-footer {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn, .list-products .product .buy-button {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  background-color: rgb(194, 194, 194);
+  border: 1px solid grey;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  transition: all 0.5s ease;
+}
+.btn:hover, .list-products .product .buy-button:hover {
+  background-color: purple;
+  cursor: pointer;
+  color: white;
 }
 
 .list-products {
@@ -101,9 +120,4 @@ main {
   box-shadow: 3px 6px 2px 0px rgba(0, 0, 0, 0.16);
   border-radius: 15px;
   background-color: white;
-}
-footer.site-footer {
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=main.css.map */

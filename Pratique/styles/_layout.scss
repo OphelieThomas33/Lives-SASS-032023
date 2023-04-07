@@ -1,35 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;400&family=Yeseva+One&display=swap');
-$gray-border-thin: 1px solid grey;
-$bottom-shadow: 3px 6px 2px 0px rgba(0,0,0,0.16);
-$transition-site: all 0.5s ease;
-$spacer: 15px;
-$black: black;
-$white: white;
-$red: red;
-$media-queries-navbar: "screen and (min-width:750px)";
-
-.transition-scale{
-    transition: $transition-site;
-    &:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-}
-
-.btn{
-    display: inline-block;
-    padding: 1em 2em;
-    margin: $spacer;
-    background-color: rgb(223, 222, 222);
-    border: $gray-border-thin;
-    text-decoration: none;
-    border-radius: 5px;
-    color: $black;
-    &:hover{
-        cursor: pointer;
-    }
-}
-
 body{
     margin: 0px;
     font-family: 'Sora', sans-serif;
@@ -41,7 +9,8 @@ header.site-header{
         border-bottom: $gray-border-thin;
         background-color: $white;
         position: fixed;
-        width: 100%;
+        z-index: 10;
+        width: calc(100% - ($spacer * 2));
         height: 65px;
         display: flex;
         justify-content: space-between;
@@ -49,10 +18,15 @@ header.site-header{
         box-shadow: $bottom-shadow;
         padding: $spacer;
         overflow: auto;
-        @media #{$media-queries-navbar}{
+        @media #{$media-queries-navbar-m}{
             .toggle-navbar{
                 display: none;
             }          
+        }
+        @media #{$media-queries-navbar-l}{
+            h1{
+                white-space: nowrap;
+            }
         }
         ul{
             background-color: $white;
@@ -71,7 +45,7 @@ header.site-header{
                 height: 100%;
                 opacity: 1;
             }
-            @media #{$media-queries-navbar}{
+            @media #{$media-queries-navbar-m}{
                 position: relative;
                 flex-direction: row;
                 justify-content: flex-end;
@@ -86,41 +60,26 @@ header.site-header{
                     text-decoration: none;
                     color: $black;
                     &:hover {
-                        color: $red;
+                        color: $accent-color;
                     }
                 }
+                // #btn-connexion:hover{
+                //     color: $white;
+                // }
             }
         }
     }
 
+h1{
+    @extend .transition-scale;
+    &:hover{
+        color: $accent-color;
+    }
+}
 
 main{
     padding: $spacer;
     background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(255,255,255,1) 49%);
-}
-
-h1{
-    @extend .transition-scale;
-}
-
-.list-products{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    .product{
-        border: $gray-border-thin;
-        padding: $spacer;
-        margin: $spacer;
-        box-shadow: $bottom-shadow;
-        border-radius: 15px;
-        background-color: $white;
-        @extend .transition-scale;
-        .buy-button{
-            @extend .transition-scale;
-            @extend .btn;
-
-        }
-    }
 }
 
 footer.site-footer{
@@ -128,4 +87,3 @@ footer.site-footer{
     display: flex;
     justify-content: center;
 }
-
