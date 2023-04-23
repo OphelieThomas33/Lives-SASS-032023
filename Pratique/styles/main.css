@@ -14,7 +14,7 @@ body {
 }
 
 header.site-header nav {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid gray;
   background-color: white;
   position: fixed;
   z-index: 10;
@@ -75,6 +75,22 @@ header.site-header nav li a {
 header.site-header nav li a:hover {
   color: purple;
 }
+header.site-header nav li #btn-connexion {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease;
+}
+header.site-header nav li #btn-connexion:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
 
 h1:hover {
   color: purple;
@@ -91,21 +107,21 @@ footer.site-footer {
   justify-content: center;
 }
 
-.btn, .list-products .product .buy-button {
+.btn {
   display: inline-block;
   padding: 1em 2em;
   margin: 15px;
-  background-color: rgb(194, 194, 194);
-  border: 1px solid grey;
+  border: 1px solid;
+  border-color: #512412;
   text-decoration: none;
   border-radius: 5px;
+  background-color: rgb(226, 156, 128);
   color: black;
   transition: all 0.5s ease;
 }
-.btn:hover, .list-products .product .buy-button:hover {
-  background-color: purple;
+.btn:hover {
+  background-color: #f5ddd3;
   cursor: pointer;
-  color: white;
 }
 
 .list-products {
@@ -114,10 +130,26 @@ footer.site-footer {
   justify-content: space-around;
 }
 .list-products .product {
-  border: 1px solid grey;
+  border: 1px solid gray;
   padding: 15px;
   margin: 15px;
   box-shadow: 3px 6px 2px 0px rgba(0, 0, 0, 0.16);
   border-radius: 15px;
   background-color: white;
+}
+.list-products .product .buy-button {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(207, 173, 18);
+  color: black;
+  transition: all 0.5s ease;
+}
+.list-products .product .buy-button:hover {
+  background-color: #f0d557;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

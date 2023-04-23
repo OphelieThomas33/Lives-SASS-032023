@@ -63,9 +63,9 @@ header.site-header{
                         color: $accent-color;
                     }
                 }
-                // #btn-connexion:hover{
-                //     color: $white;
-                // }
+                #btn-connexion{
+                    @include button($black);
+                }
             }
         }
     }

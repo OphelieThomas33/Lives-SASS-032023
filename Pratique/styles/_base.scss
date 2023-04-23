@@ -1,12 +1,13 @@
 // reset, variables, mixins and utilities classes.
-
+@use 'sass:color';
 // ------------------ reset-------------------------
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;400&family=Yeseva+One&display=swap');
 
 
 // ----------------- variables ---------------------
 
-$gray-border-thin: 1px solid grey;
+$border-thin: 1px solid;
+$gray-border-thin: 1px solid gray;
 $bottom-shadow: 3px 6px 2px 0px rgba(0,0,0,0.16);
 $transition-site: all 0.5s ease;
 $spacer: 15px;
@@ -22,7 +23,34 @@ $media-queries-navbar-l: "screen and (min-width:960px)";
 
 // -------------------- mixins ----------------------
 
+@function getColorFromBg($bg-color){
+    @debug color.blackness($bg-color);
+    @if(color.blackness($bg-color) > 30% ) {
+        @return $white;
+    }
+    @else {
+        @return $black;
+    }
+}
 
+@mixin button($bg-color: $color-btn){  // si je ne passe pas de paramètre il aura par défaut $color-btn
+    display: inline-block;
+    padding: 1em 2em;
+    margin: $spacer;
+    border: $border-thin;
+    border-color: darken($bg-color, 50%);
+    text-decoration: none;
+    border-radius: 5px;
+
+    background-color: $bg-color;
+    color: getColorFromBg($bg-color);
+
+    transition: $transition-site;
+    &:hover{
+        background-color: lighten($bg-color, 20%) ;
+        cursor: pointer;
+    }
+}
 
 // -------------------- utilities ----------------------
 .transition-scale{
