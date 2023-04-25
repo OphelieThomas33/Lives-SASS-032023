@@ -1,10 +1,10 @@
-@import 'base'
+@import 'base';
 
 
 h1{
-    &.color-red-#{sm}{
+    &.color-red-#{$sm}{
         @media #{$sm-media-query}{
-            color:red
+            color:red;
         }
     }
 }

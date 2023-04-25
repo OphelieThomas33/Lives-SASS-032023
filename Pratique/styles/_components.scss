@@ -1,6 +1,29 @@
-.btn{
-    @include button(rgb(226, 156, 128));  // possibilité de mettre une couleur optionnelle entre parenthèses (voir la mixin dans le fichier _base)
+// .btn{
+//     @include button(rgb(226, 156, 128));  // possibilité de mettre une couleur optionnelle entre parenthèses (voir la mixin dans le fichier _base)
+// }
+
+@each $colorName, $color in $colors{
+    .btn-#{$colorName}{
+        @include button($color);
+    }
+    .bg-#{$colorName}{
+        background-color: $color !important;
+    }
+    .color-#{$colorName}{
+        color: $color !important;
+    }
+    .hover-color-#{$colorName}{
+        &:hover{
+            color: $color !important;
+        }
+    }
+    .bg-text-#{$colorName}{
+        background-color: $color !important;
+        color: getColorFromBg($color) !important;
+    }
 }
+
+
 
 
 .list-products{

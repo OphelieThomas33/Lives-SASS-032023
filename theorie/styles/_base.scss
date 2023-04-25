@@ -3,3 +3,58 @@ $color-secondary: green;
 
 $sm: "sm";
 $sm-media-query: "screen and (min-width: 762px)";
+
+// Créer des classes CSS facilement grâce aux boucles
+$colors: red, blue, green; // fonctionne si les couleurs sont des chaînes de caractères
+
+
+@each $color in $colors{
+    .color-#{""+$color} {
+        color: $color;
+    }
+    .bg-#{""+$color} {
+        background-color: $color;
+    }
+    .border-#{""+$color} {
+        border: solid 2px $color;
+    }
+}
+
+$colors: ( // peut fonctionner avec des couleurs autres que des chaines de caractères
+    'red': rgb(195,58,58),
+    'blue': rgb(154, 154, 228),
+    'green': rgb(51, 107, 51),
+    'primary': rgb(201, 98, 115),
+);
+
+@each $color-name, $color in $colors{
+    .color-#{""+$color-name} {
+        color: $color;
+    }
+    .bg-#{""+$color-name} {
+        background-color: $color;
+    }
+    .border-#{""+$color-name} {
+        border: solid 2px $color;
+    }
+}
+
+
+// Créer des classes padding p-1, p-2, etc de 0 à 5
+// les classes CSS sont ensuite incluses dans le HTML
+
+$cotes: 'top', 'bottom', 'right', 'left';
+
+@for $i from 0 through 5{
+    .p-#{$i}{
+        padding: #{$i+'rem'};
+    }
+    .m-#{$i}{
+        margin: #{($i*10)+'px'};    // création de margin m-1 = 10px, m-2 = 20px, etc.
+    }
+    @each $cote in $cotes{
+        .m-#{$cote}-#{$i}{
+            #{'margin-'+$cote}: #{($i*10)+'px'}  // création de m-left-1 = margin left 10px, m-bottom-2 = margin bottom 20px, etc
+        }
+    }
+}

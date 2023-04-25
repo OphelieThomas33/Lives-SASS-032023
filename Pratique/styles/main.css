@@ -7,6 +7,176 @@
   cursor: pointer;
 }
 
+.d-none {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .d-md-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-lg-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xl-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xxl-none {
+    display: none;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  .d-sm-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .d-md-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-lg-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xl-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xxl-block {
+    display: block;
+  }
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+@media screen and (min-width: 500px) {
+  .d-sm-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .d-md-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-lg-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xl-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xxl-inline-block {
+    display: inline-block;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+@media screen and (min-width: 500px) {
+  .d-sm-flex {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .d-md-flex {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-lg-flex {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xl-flex {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xxl-flex {
+    display: flex;
+  }
+}
+
+.d-grid {
+  display: grid;
+}
+
+@media screen and (min-width: 500px) {
+  .d-sm-grid {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .d-md-grid {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-lg-grid {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xl-grid {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .d-xxl-grid {
+    display: grid;
+  }
+}
+
 body {
   margin: 0px;
   font-family: "Sora", sans-serif;
@@ -107,21 +277,140 @@ footer.site-footer {
   justify-content: center;
 }
 
-.btn {
+.btn-primary {
   display: inline-block;
   padding: 1em 2em;
   margin: 15px;
   border: 1px solid;
-  border-color: #512412;
+  border-color: #c00022;
   text-decoration: none;
   border-radius: 5px;
-  background-color: rgb(226, 156, 128);
+  background-color: pink;
   color: black;
   transition: all 0.5s ease;
 }
-.btn:hover {
-  background-color: #f5ddd3;
+.btn-primary:hover {
+  background-color: white;
   cursor: pointer;
+}
+
+.bg-primary {
+  background-color: pink !important;
+}
+
+.color-primary {
+  color: pink !important;
+}
+
+.hover-color-primary:hover {
+  color: pink !important;
+}
+
+.bg-text-primary {
+  background-color: pink !important;
+  color: black !important;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(24, 207, 48);
+  color: black;
+  transition: all 0.5s ease;
+}
+.btn-secondary:hover {
+  background-color: #60ed73;
+  cursor: pointer;
+}
+
+.bg-secondary {
+  background-color: rgb(24, 207, 48) !important;
+}
+
+.color-secondary {
+  color: rgb(24, 207, 48) !important;
+}
+
+.hover-color-secondary:hover {
+  color: rgb(24, 207, 48) !important;
+}
+
+.bg-text-secondary {
+  background-color: rgb(24, 207, 48) !important;
+  color: black !important;
+}
+
+.btn-danger {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(85, 102, 156);
+  color: white;
+  transition: all 0.5s ease;
+}
+.btn-danger:hover {
+  background-color: #939fc4;
+  cursor: pointer;
+}
+
+.bg-danger {
+  background-color: rgb(85, 102, 156) !important;
+}
+
+.color-danger {
+  color: rgb(85, 102, 156) !important;
+}
+
+.hover-color-danger:hover {
+  color: rgb(85, 102, 156) !important;
+}
+
+.bg-text-danger {
+  background-color: rgb(85, 102, 156) !important;
+  color: white !important;
+}
+
+.btn-warning {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 15px;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(233, 157, 17);
+  color: black;
+  transition: all 0.5s ease;
+}
+.btn-warning:hover {
+  background-color: #f4c46c;
+  cursor: pointer;
+}
+
+.bg-warning {
+  background-color: rgb(233, 157, 17) !important;
+}
+
+.color-warning {
+  color: rgb(233, 157, 17) !important;
+}
+
+.hover-color-warning:hover {
+  color: rgb(233, 157, 17) !important;
+}
+
+.bg-text-warning {
+  background-color: rgb(233, 157, 17) !important;
+  color: black !important;
 }
 
 .list-products {

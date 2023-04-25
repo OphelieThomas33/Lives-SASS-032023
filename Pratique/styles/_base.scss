@@ -20,6 +20,22 @@ $color-btn-hover: rgb(100, 100, 100);
 $media-queries-navbar-m: "screen and (min-width:750px)";
 $media-queries-navbar-l: "screen and (min-width:960px)";
 
+$colors: (
+    'primary': pink,
+    'secondary': rgb(24, 207, 48),
+    'danger': rgb(85, 102, 156),
+    'warning': rgb(233, 157, 17),
+);
+
+$breakpoints: (
+    'sm': 500px,
+    'md': 700px,
+    'lg': 500px,
+    'xl': 500px,
+    'xxl': 500px,
+);
+
+$displays: none, block, inline-block, flex, grid;
 
 // -------------------- mixins ----------------------
 
@@ -58,5 +74,18 @@ $media-queries-navbar-l: "screen and (min-width:960px)";
     &:hover {
         transform: scale(1.05);
         cursor: pointer;
+    }
+}
+
+@each $display in $displays{
+    .d-#{$display}{
+        display:$display;
+    }
+    @each $breakpoint, $size in $breakpoints{
+        .d-#{$breakpoint}-#{$display}{
+            @media screen and (min-width: $size){
+                display: $display;
+            }
+        }
     }
 }
